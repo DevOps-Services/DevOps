@@ -20,6 +20,9 @@ namespace DevOps.Api.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
+            if (id == 2)
+                return NotFound().StatusCode.ToString();
+            else
             return "value";
         }
 
